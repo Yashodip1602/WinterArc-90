@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: ebs-test-pvc
+  namespace: dev
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: ebs-csi-gp3
+  resources:
+    requests:
+      storage: 1Gi
